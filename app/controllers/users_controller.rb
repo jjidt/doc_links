@@ -14,4 +14,12 @@ class UsersController < ApplicationController
       redirect_to :back
     end
   end
+
+
+private
+
+def user_params
+  params.require(:user).permit(:name, :password, :password_cofirmation)
+end
+
 end
