@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       redirect_to :root
     else
       flash.now.alert = "Incorrect information, please try again"
+      render :new
     end
   end
 
