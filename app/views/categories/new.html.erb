@@ -3,8 +3,8 @@
   <div class="col-md-6">
     <div class="form-group" >
       <%= f.label "Name of Category" %>
-      <%= f.text_field :name, :class => "form-control" %>
+      <%= f.text_field :name, :class => "form-control", :id => "name" %>
     </div>
-    <%= f.submit "create", :class => "btn btn-primary" %>
+    <%= f.submit "create", :class => "btn btn-primary", :id => "submit" %>
   </div>
 <% end %>
