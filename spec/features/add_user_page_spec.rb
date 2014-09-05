@@ -18,12 +18,23 @@ describe 'creating a new user' do
     click_button 'Create User'
     expect(page).to have_content 'user created successfully'
   end
+
   it 'should display an error message when user name form field is blank' do
     visit('/')
     click_link 'create-profile'
     fill_in 'name', :with => ''
     fill_in :password, :with => 'test'
     fill_in :confirm_password, :with => 'test'
+    click_button 'Create User'
+    expect(page).to have_content 'incomplete information'
+  end
+
+  it 'should display an error message when passwords do not match' do
+    visit('/')
+    click_link 'create-profile'
+    fill_in 'name', :with => 'test'
+    fill_in :password, :with => 'test'
+    fill_in :confirm_password, :with => 'tes'
     click_button 'Create User'
     expect(page).to have_content 'incomplete information'
   end
