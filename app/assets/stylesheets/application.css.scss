@@ -16,3 +16,19 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.jumbotron {
+  background-color: #5D5A63;
+  color: white
+}
+
+.right {
+  clear: both;
+  float: right;
+  margin-right: 3%;
+  color: white
+}
+
+.right:hover {
+  color: red
+}
