@@ -1,5 +1,5 @@
 require 'rails_helper'
-require 'login_helper'
+require 'create_helper'
 
 describe 'adding a category' do
   before do
