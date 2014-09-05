@@ -13,7 +13,7 @@
     Logged in as <%= current_user.name %>
     <p><%= link_to "Log out", logout_path, :class => "right" %></p>
   <% else %>
-    <p><%= link_to "login", login_path, :class => "right" %></p>
+    <p><%= link_to "login", login_path, :class => "right", :id => "login" %></p>
     <p><%= link_to "Create Profile",  signup_path, :class => "right", :id => "create-profile" %></p>
   <% end %>
   <h1 class="text-center">&nbsp&nbsp Doc Links</h1>
