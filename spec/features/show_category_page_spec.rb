@@ -13,4 +13,9 @@ describe 'showing a category page' do
     expect(page).to have_content "ruby"
     expect(page).to have_content "links"
   end
+  it 'returns to the previous page when back link is clicked' do
+    click_link "ruby"
+    click_link "back"
+    expect(page).to have_content "Your categories"
+  end
 end
