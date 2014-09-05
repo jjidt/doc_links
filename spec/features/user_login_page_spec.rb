@@ -6,8 +6,8 @@ describe 'Logging in a user' do
   it 'successfully logs in a user' do
     visit '/'
     click_link 'login'
-    fill_in :name, :with => "john"
-    fill_in :password, :with => "test"
+    fill_in :name, :with => 'john'
+    fill_in :password, :with => 'test'
     click_button ''
     expect(page).to have_content 'Logged in'
   end
@@ -15,8 +15,17 @@ describe 'Logging in a user' do
   it 'displays an error message if the password is incorrect' do
     visit '/'
     click_link 'login'
-    fill_in :name, :with => "john"
-    fill_in :password, :with => "nope"
+    fill_in :name, :with => 'john'
+    fill_in :password, :with => 'nope'
+    click_button ''
+    expect(page).to have_content 'Incorrect information'
+  end
+
+  it 'displays an error message if the name is not found' do
+    visit '/'
+    click_link 'login'
+    fill_in :name, :with => 'johnny'
+    fill_in :password, :with => 'test'
     click_button ''
     expect(page).to have_content 'Incorrect information'
   end
