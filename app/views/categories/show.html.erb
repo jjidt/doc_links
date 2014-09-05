@@ -1,8 +1,25 @@
-<div class="col-md-4">
-  <%= link_to "Back", categories_path, :id => "back" %>
+<div class="row">
+  <div class="col-md-4">
+    <%= link_to "Back", categories_path, :id => "back" %>
+  </div>
+  <div class="col-md-4">
+    <h1 class="text-center category-name"><%= @category.name %></h1>
+  </div>
+  <div class="col-md-4">
+  </div>
 </div>
-<div class="col-md-4">
-  <h2 class="text-center category-name"><%= @category.name %></h2>
-</div>
-<div class="col-md-4">
+<div class="row">
+  <div class="col-md-5">
+    <div class="holder lead">
+      <p>Links</p>
+    </div>
+    <%= link_to "Add link", new_category_link_path(@category) %>
+  </div>
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-5">
+    <div class="holder lead">
+      <p>Snippets</p>
+    </div>
+  </div>
 </div>

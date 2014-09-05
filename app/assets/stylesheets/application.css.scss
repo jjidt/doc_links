@@ -21,7 +21,8 @@ $theme-color: #01B49F;
 
 .jumbotron {
   background-color: $theme-color;
-  color: white
+  color: white;
+  height: 260px
 }
 
 .right {
@@ -35,10 +36,6 @@ $theme-color: #01B49F;
   color: red
 }
 
-.jumbotron {
-  height: 300px;
-}
-
 .list-item {
   font-size: 20px;
 }
@@ -49,4 +46,13 @@ $theme-color: #01B49F;
 
 .description {
   font-size: 30px;
+}
+
+.holder {
+  color: $theme-color;
+  text-align: center;
+  background-color: $theme-color;
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
 }

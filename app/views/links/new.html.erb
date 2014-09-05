@@ -1,0 +1,12 @@
+<h2>add link</h2>
+<%= form_for([:category, @link]) do |f| %>
+  <div class="col-md-4">
+    <div class="form-group" >
+      <%= f.label "Link url" %>
+      <%= f.text_field :url, :id => :url, :class => 'form-control' %>
+      <%= f.label "Link description" %>
+      <%= f.text_field :name, :id => :name, :class => 'form-control' %>
+    </div>
+    <%= f.submit "create", :class => "btn btn-primary"%>
+  </div>
+<% end %>

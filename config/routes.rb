@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  resources :links
 
-  resources :categories
+  resources :categories do
+    resources :links
+  end
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
