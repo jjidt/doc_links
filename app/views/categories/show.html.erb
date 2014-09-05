@@ -13,7 +13,12 @@
     <div class="holder lead">
       <p>Links</p>
     </div>
-    <%= link_to "Add link", new_category_link_path(@category) %>
+    <%= link_to "Add link", new_category_link_path(@category), :id => "add-link" %>
+  <div class="container link-holder">
+    <% @links.each do |link| %>
+      <p><%= link_to link.name, link.url %></p>
+    <% end %>
+  </div>
   </div>
   <div class="col-md-2">
   </div>

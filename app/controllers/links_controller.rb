@@ -15,4 +15,11 @@ class LinksController < ApplicationController
       redirect_to :back
     end
   end
+
+private
+
+  def link_params
+    params.require(:link).permit(:url, :name, :category_id)
+  end
+
 end
