@@ -17,8 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$theme-color: #01B49F;
+
 .jumbotron {
-  background-color: #005255;
+  background-color: $theme-color;
   color: white
 }
 
@@ -31,4 +33,20 @@
 
 .right:hover {
   color: red
+}
+
+.jumbotron {
+  height: 300px;
+}
+
+.list-item {
+  font-size: 20px;
+}
+
+.category-name {
+  color: $theme-color;
+}
+
+.description {
+  font-size: 30px;
 }
