@@ -17,7 +17,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$theme-color: #01B49F;
+$theme-color: #46357E;
+$secondary-text-color: #2C534F;
 
 .jumbotron {
   background-color: $theme-color;
@@ -41,7 +42,7 @@ $theme-color: #01B49F;
 }
 
 .category-name {
-  color: $theme-color;
+  color: $secondary-text-color;
 }
 
 .description {
