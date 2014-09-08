@@ -2,12 +2,7 @@ require 'rails_helper'
 require 'create_helper'
 
 describe 'adding a link' do
-  before do
-    user = FactoryGirl.create(:user)
-    login({:name => 'john', :password => 'test'})
-    create_category({:name => "ruby"})
-    create_category({:name => "javascript"})
-  end
+  before { create_categories }
 
   it "adds a link to category page" do
     click_link "ruby"
