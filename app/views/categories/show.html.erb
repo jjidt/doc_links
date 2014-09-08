@@ -27,5 +27,12 @@
       <p>Snippets</p>
     </div>
     <%= link_to "Add a snippet", new_category_snippet_path(@category), :id => "add-snippet" %>
+    <p>
+      <div class="container link-holder">
+        <% @snippets.each do |snippet| %>
+          <p><%= link_to snippet.language + "  " + snippet.description, category_snippet_path(@category, snippet) %></p>
+        <% end %>
+      </div>
+    </p>
   </div>
 </div>

@@ -1,0 +1,14 @@
+<div class="col-md-4">
+  <%= link_to "Back", category_path(@category), :id => "back" %>
+</div>
+<div class="col-md-8">
+  <h3><%= @snippet.description %></h3>
+  <h4><%= @snippet.language %></h4>
+  <br>
+  <br>
+  <% @snippet.code.split(/\n/).each do |line| %>
+    <p><%= line %></p>
+  <% end %>
+</div>
+<div class="col-md-4">
+</div>

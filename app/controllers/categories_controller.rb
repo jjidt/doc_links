@@ -30,6 +30,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @links = @category.links
+    @snippets = @category.snippets
   end
 
 private
