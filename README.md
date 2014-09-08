@@ -1,28 +1,45 @@
-== README
+#Doc Links
+Doc links lets users catalog useful documentation links, blog posts, and code snippets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Epicodus Conventional Rails Assessment
 
-Things you may want to cover:
+##Setup
+In your terminal, clone this repo:
 
-* Ruby version
+```console
+$ clone https://github.com/jjidt/doc_links.git
+```
 
-* System dependencies
+Make sure you've installed [postgres](http://www.postgresql.org/download/) and have started the server:
 
-* Configuration
+```console
+$ postgres
+```
 
-* Database creation
+Install all the dependencies:
 
-* Database initialization
+```console
+$ bundle install
+```
 
-* How to run the test suite
+Set up the databases on your local machine:
 
-* Services (job queues, cache servers, search engines, etc.)
+```console
+$ rake db:create
+$ rake db:schema:load
+```
 
-* Deployment instructions
+Start the rails server:
 
-* ...
+```console
+$ rails s
+```
+It will now be available locally at `localhost:3000`.
 
+View it online here [Heroku](http://doc_links.herokuapp.com).
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Author
+[J.J. Idt](https://github.com/jjidt)
+
+##License
+MIT

@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
   resources :categories do
-    resources :links
-    resources :snippets
+    resources :links, :only => [:new, :create]
+    resources :snippets, :only => [:new, :create, :show]
   end
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :users
+  resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
 
   root :to => 'categories#index'
