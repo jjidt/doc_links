@@ -5,6 +5,7 @@ class SnippetsController < ApplicationController
   end
 
   def create
+    @category = Category.find(params[:category_id])
     @snippet = Snippet.new(snippet_params)
     if @snippet.save
       flash[:notice] = "snippet created"
