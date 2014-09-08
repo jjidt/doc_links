@@ -36,7 +36,7 @@ $ rails s
 ```
 It will now be available locally at `localhost:3000`.
 
-View it online here [Heroku](http://doc_links.herokuapp.com).
+View it online here [Heroku](http://doc-links.herokuapp.com).
 
 ##Author
 [J.J. Idt](https://github.com/jjidt)
