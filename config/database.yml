@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: doc_links_production
-  username: doc_links
-  password: <%= ENV['DOC_LINKS_DATABASE_PASSWORD'] %>
