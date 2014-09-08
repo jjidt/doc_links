@@ -1,7 +1,10 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = []
-    @categories = current_user.categories if current_user.categories
+    if current_user
+      @categories = current_user.categories
+    else
+      render 'application/index.html.erb'
+    end
   end
 
   def new

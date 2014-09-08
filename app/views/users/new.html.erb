@@ -1,13 +1,15 @@
 <h1>Create a new Profile</h1>
 
 <%= form_for @user do |f| %>
-  <div class="form-group" >
-    <%= f.label :name %>
-    <%= f.text_field :name, :class => "form-control", :id => "name" %>
-    <%= f.label :password %>
-    <%= f.password_field :password, :class => "form-control", :id => "password" %>
-    <%= f.label "confirm password" %>
-    <%= f.password_field :password_confirmation, :class => "form-control", :id => "confirm_password" %>
+  <div class="col-md-4">
+    <div class="form-group" >
+      <%= f.label :name %>
+      <%= f.text_field :name, :class => "form-control", :id => "name" %>
+      <%= f.label :password %>
+      <%= f.password_field :password, :class => "form-control", :id => "password" %>
+      <%= f.label "confirm password" %>
+      <%= f.password_field :password_confirmation, :class => "form-control", :id => "confirm_password" %>
+    </div>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
-  <%= f.submit :class => "btn btn-primary" %>
 <% end %>

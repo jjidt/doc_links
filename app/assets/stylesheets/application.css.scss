@@ -26,6 +26,19 @@ $secondary-text-color: #2C534F;
   height: 260px
 }
 
+.title {
+  color: white;
+}
+
+.doc :hover {
+  color: white;
+  text-decoration: none;
+}
+
+.doc > a {
+  color: white;
+}
+
 .right {
   clear: both;
   float: right;
