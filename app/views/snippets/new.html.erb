@@ -1,0 +1,14 @@
+<h2>add link</h2>
+<%= form_for([:category, @snippet]) do |f| %>
+  <div class="col-md-4">
+    <div class="form-group" >
+      <%= f.label "Language" %>
+      <%= f.text_field :language, :id => :language, :class => 'form-control' %>
+      <%= f.label "Description" %>
+      <%= f.text_field :description, :id => :description, :class => 'form-control' %>
+      <%= f.label "Code" %>
+      <%= f.text_area :code, :id => :code, :class => 'form-control' %>
+    </div>
+    <%= f.submit "create", :class => "btn btn-primary"%>
+  </div>
+<% end %>

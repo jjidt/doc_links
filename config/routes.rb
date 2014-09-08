@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-  resources :snippets
-
   resources :categories do
     resources :links
+    resources :snippets
   end
 
   get 'signup', to: 'users#new', as: 'signup'
